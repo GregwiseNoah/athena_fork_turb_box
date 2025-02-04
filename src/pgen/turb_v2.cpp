@@ -952,7 +952,7 @@ void MeshBlock::UserWorkBeforeOutput(ParameterInput *pin){
   // check for number of cells that are hitting the pressure floor
   if (num_cell_pfloor >= static_cast<float>(num_cell_mesh) * 0.005) {  // return an error if > 0.5%
     std::stringstream msg;
-    msg << "### FATAL ERROR in function" << std::endl;
+    msg << "### FATAL ERROR in function, num cell error in pgen file for pressure floor check" << std::endl;
     std::cout << msg.str();
     std::exit(EXIT_FAILURE);
     return;

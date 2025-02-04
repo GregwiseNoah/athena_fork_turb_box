@@ -20,9 +20,9 @@ module load fftw-mpi/3.3.8
 module load hdf5-mpi/1.8.21
 module list
 
-cd /u/ageorge/athena_fork_turb_box/
+cd /u/ageorge/athena_fork_turb_box/Test
 
-srun ./bin/athena -i Test/athinput.turb -t 00:25:00
+srun ./athena_turb -i athinput.turb -t 00:25:00
 
 echo "Elapsed: $(($SECONDS / 3600))hrs $((($SECONDS / 60) % 60))min $(($SECONDS % 60))sec"
 
