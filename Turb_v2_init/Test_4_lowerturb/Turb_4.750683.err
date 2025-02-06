@@ -1,0 +1,6 @@
+srun: spank: option "enable-coredump" provided by both coredumpsize.so and coredumpsize.so
+srun: error: freya080: task 26: Exited with exit code 1
+srun: launch/slurm: _step_signal: Terminating StepId=750683.0
+slurmstepd: error: *** STEP 750683.0 ON freya080 CANCELLED AT 2025-02-06T11:52:48 ***
+srun: error: freya080: tasks 0-25,27-31: Killed
+srun: Force Terminated StepId=750683.0
