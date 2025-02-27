@@ -30,7 +30,7 @@ dt        = 0.42       # time increment between outputs
 
 
 <time>
-cfl_number  = 0.3       # The Courant, Friedrichs, & Lewy (CFL) Number
+cfl_number  = 0.1       # The Courant, Friedrichs, & Lewy (CFL) Number
 nlim        = -1        # cycle limit
 tlim        = 42        # time limit
 integrator  = rk2       # time integration algorithm
@@ -91,10 +91,10 @@ heating = 0.001                  # constant volume heating rate
 
 cs_hot = 0.34
 
-cooling_flag = 0                 # set to 1 to turn on cooling, 0 to turn it off
+cooling_flag = 1                 # set to 1 to turn on cooling, 0 to turn it off
 global_cooling_flag = 0         # set to 1 to turn on uniform global cooling, 0 to turn it off
 cloud_flag   = 0                 # set to 1 to add the cloud on restart, 0 to not 
-rescale_flag = 0                 # If cloud_flag is 1, checks for rescaling the temperature on restart
+rescale_flag = 1                 # If cloud_flag is 1, checks for rescaling the temperature on restart
 
 amb_rho      = 1.0               # density of the ambient medium, in code units
 
@@ -103,7 +103,7 @@ cloud_time   = 42.0              # time of insertion of cloud, in code units
 cloud_chi    = 1000               # density contrast of the cloud, rho_cloud/amb_rho
 
 
-T_floor      = 4000             # floor temperature in the simulation
+T_floor      = 40000             # floor temperature in the simulation
 T_ceil       = 1000000000         # ceiling temperature in the simulation
 T_hot_req    = 40000000           # hot medium temperature required, reset to this on restart, if cloud_flag is 1
 T_hot        = 10000000            # initial hot medium temperature (box heats up due to turbulence) increased by a order
@@ -124,7 +124,7 @@ B_z          = 0.0               # initial magnetic field in z-direction
 
 
 #Parameter to solve error
-hdf_cloud_flag = 0
+hdf_cloud_flag = 1
 T_warm = 40000000
 restart_cloud_flag    =  0
 

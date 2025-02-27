@@ -1,0 +1,8 @@
+data_Test_16 = np.loadtxt(hst_Test_16_path, comments="#")
+mass_Test_16 = data_Test_16[:, 2]
+KE_Test_16 = data_Test_16[:, 6] + data_Test_16[:, 7] + data_Test_16[:, 8]
+vturb_Test_16_array = np.sqrt(2 * KE_Test_16 / mass_Test_16)
+vturb_Test_16 = np.mean(vturb_Test_16_array[-500:])
+Mach_Test_16 = vturb_Test_16 / cs
+r_cl_Test_16s = np.loadtxt("/u/ageorge/athena_fork_turb_box/M0.25_simulation_data.csv", delimiter=",", skiprows=1)[0,1]
+t_cc_Test_16 = np.sqrt(chi) * r_cl_Test_16s / vturb_Test_16

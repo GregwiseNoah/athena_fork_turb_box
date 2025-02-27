@@ -73,3 +73,6 @@ doc/doxy*
 
 # Large files
 *tar.gz
+
+#error reports
+*.err
