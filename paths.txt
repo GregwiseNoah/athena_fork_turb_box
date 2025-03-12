@@ -19,7 +19,20 @@ These files need to have their Mach numbers recalculated!!!!!
 vturb paths
 '/u/ageorge/athena_fork_turb_box/Turb_v2_init/Test_15/alpha_0.01/Turb/Turb.hst'
 '/u/ageorge/athena_fork_turb_box/Turb_v2_init/Test_16/alpha_0.01/Turb/Turb.hst'
+'/u/ageorge/athena_fork_turb_box/Turb_v2_init/Test_17/alpha_0.01/Turb/Turb.hst'
 
+
+
+
+Test_17
+'/u/ageorge/athena_fork_turb_box/Turb_v2_init/Test_17/alpha_0.01/Cloud_2/Turb.hst'
+'/u/ageorge/athena_fork_turb_box/Turb_v2_init/Test_17/alpha_0.01/Cloud/Turb.hst'
+'/u/ageorge/athena_fork_turb_box/Turb_v2_init/Test_17/alpha_0.1/Cloud_2/Turb.hst'
+'/u/ageorge/athena_fork_turb_box/Turb_v2_init/Test_17/alpha_0.1/Cloud/Turb.hst'
+'/u/ageorge/athena_fork_turb_box/Turb_v2_init/Test_17/alpha_1/Cloud_2/Turb.hst'
+'/u/ageorge/athena_fork_turb_box/Turb_v2_init/Test_17/alpha_1/Cloud/Turb.hst'
+'/u/ageorge/athena_fork_turb_box/Turb_v2_init/Test_17/alpha_10/Cloud_2/Turb.hst'
+'/u/ageorge/athena_fork_turb_box/Turb_v2_init/Test_17/alpha_10/Cloud/Turb.hst'
 
 
 

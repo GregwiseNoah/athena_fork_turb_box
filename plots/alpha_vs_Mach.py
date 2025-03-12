@@ -85,7 +85,7 @@ sc = plt.scatter(
                                        mass_ratios_14,
                                         mass_ratios_16]),
                     cmap=cmr.prinsenvlag, 
-                    vmin=vmin, vmax=vmax, edgecolors='k')
+                    vmin=vmin, vmax=vmax)
 
 
 cbar = plt.colorbar(sc)

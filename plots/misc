@@ -4,5 +4,10 @@ KE_Test_16 = data_Test_16[:, 6] + data_Test_16[:, 7] + data_Test_16[:, 8]
 vturb_Test_16_array = np.sqrt(2 * KE_Test_16 / mass_Test_16)
 vturb_Test_16 = np.mean(vturb_Test_16_array[-500:])
 Mach_Test_16 = vturb_Test_16 / cs
-r_cl_Test_16s = np.loadtxt("/u/ageorge/athena_fork_turb_box/M0.25_simulation_data.csv", delimiter=",", skiprows=1)[0,1]
+r_cl_Test_16s = np.loadtxt("/u/ageorge/athena_fork_turb_box/M0.75_simulation_data.csv", delimiter=",", skiprows=1)[:-1,1]
 t_cc_Test_16 = np.sqrt(chi) * r_cl_Test_16s / vturb_Test_16
+
+mass_ratios_16 = [ get_mass_ratio("/u/ageorge/athena_fork_turb_box/Turb_v2_init/Test_16/alpha_0.01/Cloud/Turb.hst"),
+                   get_mass_ratio("/u/ageorge/athena_fork_turb_box/Turb_v2_init/Test_16/alpha_0.1/Cloud/Turb.hst"),
+                   get_mass_ratio("/u/ageorge/athena_fork_turb_box/Turb_v2_init/Test_16/alpha_1/Cloud/Turb.hst"),
+                   get_mass_ratio("/u/ageorge/athena_fork_turb_box/Turb_v2_init/Test_16/alpha_10/Cloud/Turb.hst")]

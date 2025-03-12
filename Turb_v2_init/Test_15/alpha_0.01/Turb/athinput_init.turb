@@ -98,7 +98,7 @@ rescale_flag = 0                 # If cloud_flag is 1, checks for rescaling the 
 
 amb_rho      = 0.01               # density of the ambient medium, in code units
 
-cloud_radius = 0.6376           # radius of the cloud, in code units
+cloud_radius = 0.31881672           # radius of the cloud, in code units
 cloud_time   = 42.0              # time of insertion of cloud, in code units
 cloud_chi    = 1000               # density contrast of the cloud, rho_cloud/amb_rho
 
