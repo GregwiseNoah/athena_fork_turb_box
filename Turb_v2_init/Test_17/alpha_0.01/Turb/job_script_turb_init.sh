@@ -20,7 +20,7 @@ module load fftw-mpi/3.3.8
 module load hdf5-mpi/1.8.21
 module list
 
-cd /u/ageorge/athena_fork_turb_box/Turb_v2_init/Test_17/alpha_0.01/Turb
+cd /u/ageorge/athena_fork_turb_box/Turb_v2_init/Test_17/alpha_0.01/Turb_1
 
 srun ./athena_turb -i athinput_init.turb
 

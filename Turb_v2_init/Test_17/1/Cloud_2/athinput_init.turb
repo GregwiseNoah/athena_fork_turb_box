@@ -76,7 +76,7 @@ expo       = 2.0                 # power-law exponent
 tcorr      = 0.273                # correlation time for OU process (both impulsive and continuous)
 dtdrive    = 0.00273             # time interval between perturbation (impulsive)
 f_shear    = 0.3                 # the ratio of the shear component
-rseed      = 1                   # if non-negative, seed will be set by hand (slow PS generation)
+rseed      = 2                   # if non-negative, seed will be set by hand (slow PS generation)
 
 # tcorr ~ t_eddy
 # dtdrive << t_eddy
