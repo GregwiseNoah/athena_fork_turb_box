@@ -17,6 +17,7 @@
 #include "../eos/eos.hpp"
 #include "../field/field.hpp"
 #include "../hydro/hydro.hpp"
+#include "../parameter_input.hpp"
 
 #include "code_units.hpp"
 
@@ -44,6 +45,32 @@ Real cold_gas(MeshBlock *pmb, int iout){
   }
 
   return cold_gas_mass;
+}
+
+Real warm_gas(MeshBlock *pmb, int iout){
+
+  Real warm_gas_mass=0;
+
+  int is=pmb->is, ie=pmb->ie, js=pmb->js, je=pmb->je, ks=pmb->ks, ke=pmb->ke;
+  
+  for(int k=ks; k<=ke; k++) {
+    for(int j=js; j<=je; j++) {
+      for(int i=is; i<=ie; i++) {
+        
+        Real rho = pmb->phydro->u(IDN,k,j,i);
+        Real prs = pmb->phydro->w(IPR,k,j,i);
+
+        Real temp = (prs / rho) * KELVIN * mu ;
+
+        if (temp >= T_cold && temp <= T_warm){ // append the warm gas mass
+          warm_gas_mass += rho*pmb->pcoord->GetCellVolume(k,j,i);
+        }
+
+      }
+    }
+  }
+
+  return warm_gas_mass;
 }
 
 Real rho_sum(MeshBlock *pmb, int iout){
@@ -85,6 +112,29 @@ Real rho_sq_sum(MeshBlock *pmb, int iout){
   }
 
   return rho_sq_sum;
+}
+
+Real T_sum (MeshBlock *pmb, int iout){
+
+  Real T_sum = 0;
+
+  int is=pmb->is, ie=pmb->ie, js=pmb->js, je=pmb->je, ks=pmb->ks, ke=pmb->ke;
+
+  for(int k=ks; k<=ke; k++) {
+    for(int j=js; j<=je; j++) {
+      for(int i=is; i<=ie; i++) {
+        
+        Real rho = pmb->phydro->u(IDN,k,j,i);
+        Real prs = pmb->phydro->w(IPR,k,j,i);
+
+        T_sum += prs/rho * KELVIN * mu;
+
+      }
+    }
+  }
+
+  return T_sum;
+
 }
 
 Real c_s_sum(MeshBlock *pmb, int iout){

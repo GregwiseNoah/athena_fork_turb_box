@@ -73,3 +73,12 @@ doc/doxy*
 
 # Large files
 *tar.gz
+
+#error reports
+*.err
+
+athena_turb
+*.mp4
+Snapshots/
+.ipynb_checkpoints/
+.vscode/
